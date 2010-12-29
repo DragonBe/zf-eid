@@ -1,0 +1,17 @@
+EID integration with Zend Framework
+===================================
+
+Fedict is working on a identity provider for eID authentication.
+
+The eID Identity Provider product is a simple IdP using the eID as authentication token.
+The eID IdP uses the eID Applet for eID based entity authentication and the eID Trust Service for authentication
+certificate validation.
+
+The eID IdP supports different authentication protocols to ease integration within 3rd party applications:
+
+- SAML2 Browser POST profile
+- OpenID 2 with Attribute Exchange and PAPE,
+- WS-Federation with SAML2 Metadata.
+
+In this repository i've outlined an example on how you can setup eID authentication using Zend Framework and
+Fedict's OpenID 2 provider

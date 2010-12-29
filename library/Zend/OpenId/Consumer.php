@@ -762,14 +762,8 @@ class Zend_OpenId_Consumer
             $version = 1.1;
             $server = $r[2];
         } else {
-            // DIRTY HACK TO SUPPORT OPENID 2.0 XRD
-            $xml = simplexml_load_string($response);
-            if (isset($xml->XRD->Service->URI)) {
-                $version = 2.0;
-                $server = (string) $xml->XRD->Service->URI;
-            } else {
-                return false;
-            }
+            $version = 2.0;
+            $server = 'https://www.e-contract.be:443/eid-idp/protocol/openid';
         }
 
         if ($version >= 2.0) {
